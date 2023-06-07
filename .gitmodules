@@ -1,0 +1,3 @@
+[submodule "libs/anu"]
+	path = libs/anu
+	url = https://github.com/Svengali/anu.git
