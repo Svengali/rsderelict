@@ -1,3 +1,6 @@
 [submodule "libs/anu"]
 	path = libs/anu
 	url = https://github.com/Svengali/anu.git
+[submodule "libs/tracing"]
+	path = libs/tracing
+	url = https://github.com/Svengali/tracing.git
