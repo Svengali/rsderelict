@@ -4,3 +4,6 @@
 [submodule "libs/tracing"]
 	path = libs/tracing
 	url = https://github.com/Svengali/tracing.git
+[submodule "libs/rend3"]
+	path = libs/rend3
+	url = https://github.com/Svengali/rend3.git

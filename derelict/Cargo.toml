@@ -1,0 +1,12 @@
+[package]
+name = "derelict"
+version = "0.0.1"
+edition = "2021"
+
+
+[dependencies]
+anu = { path = "../libs/anu" }
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+rend3 = "0.3.0"

@@ -1,14 +1,10 @@
-[package]
-name = "derelict"
-version = "0.0.1"
-edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-[patch.crates-io]
-tracing = { path = "libs/tracing/tracing" }
 
 
-[dependencies]
-anu = { path = "libs/anu" }
-tracing = "0.2.0"
+
+[workspace]
+resolver="2"
+members = [
+    "libs/anu",
+    "derelict"
+]
 
