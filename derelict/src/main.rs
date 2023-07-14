@@ -56,7 +56,24 @@ fn main()
 
     println!("Howdy");
 
-    tracing_subscriber::registry().with( anu::CustomLayer ).init();
+    tracing_subscriber::registry()
+        .with( anu::CustomLayer )
+        //.with( anu::PrintVisitor )
+        .init();
+
+    /*
+
+    let fmt = tracing_subscriber::fmt()
+
+    .with_span_events(FmtSpan::FULL)
+
+    .with_max_level(Level::DEBUG)
+
+    .compact()
+
+    .init()
+    ;
+    // */
 
     println!("Registered Layer");
 
