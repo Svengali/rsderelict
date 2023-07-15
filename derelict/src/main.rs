@@ -1,7 +1,7 @@
 
 use anu;
 
-use tracing::{span, Level, info};
+use tracing::{span, Level, info, trace, debug, warn, error};
 
 use tracing_subscriber::{fmt, prelude::*};
 
@@ -54,10 +54,11 @@ fn main()
 
     //tracing_subscriber::registry().with( anu::CustomLayer ).init();
 
-    println!("Howdy");
+    println!("Howdy.  Its a brand new world");
+    println!("-----------------------------");
 
     tracing_subscriber::registry()
-        .with( anu::CustomLayer )
+        .with( anu::CustomLayer { ..Default::default() } )
         //.with( anu::PrintVisitor )
         .init();
 
@@ -75,8 +76,14 @@ fn main()
     ;
     // */
 
-    println!("Registered Layer");
+    //println!("Registered Layer");
 
+    info!("Testing each type of log level");
+    trace!("Trace");
+    debug!("Debug");
+    info!("Info");
+    warn!("Warn");
+    error!("Error");
 
     info!(a_bool = true, answer = 42, message = "first example");
 
@@ -86,11 +93,16 @@ fn main()
         let main_span = span!(Level::INFO, "main()");
         let _span = main_span.enter();
     
-        println!("Hello, world!");
+        //println!("Hello, world!");
+        info!( "Hello world" );
+
+        anu::print( "Another span".to_string() );
     }
 
 
 
     anu::print( "Hello".to_string() );
+
+    info!("End of application");
 
 }
