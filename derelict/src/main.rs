@@ -3,9 +3,8 @@ use anu;
 
 use tracing::{span, Level, info, trace, debug, warn, error};
 
-use tracing_subscriber::{fmt, prelude::*};
+use tracing_subscriber::{prelude::*};
 
-use tracing_subscriber::fmt::format::FmtSpan;
    
 
 mod net;
@@ -19,7 +18,7 @@ struct Tracer {
 }
 
 impl Tracer {
-    pub fn span() {
+    pub fn _span() {
 
     }
 }
